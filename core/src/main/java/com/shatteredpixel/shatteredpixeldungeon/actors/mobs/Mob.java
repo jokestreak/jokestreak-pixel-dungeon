@@ -1190,6 +1190,8 @@ public abstract class Mob extends Char {
 	public String info(){
 		String desc = description();
 
+		desc += "\n\nHP/HT: _" + HP + "/" + HT + "_";
+
 		for (Buff b : buffs(ChampionEnemy.class)){
 			desc += "\n\n_" + Messages.titleCase(b.name()) + "_\n" + b.desc();
 		}

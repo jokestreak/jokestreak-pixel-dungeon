@@ -113,9 +113,9 @@ public class Food extends Item {
 	
 	protected void satisfy( Hero hero ){
 		float foodVal = energy;
-		if (Dungeon.isChallenged(Challenges.NO_FOOD)){
+		/*if (Dungeon.isChallenged(Challenges.NO_FOOD)){
 			foodVal /= 3f;
-		}
+		}*/
 
 		Artifact.ArtifactBuff buff = hero.buff( HornOfPlenty.hornRecharge.class );
 		if (buff != null && buff.isCursed()){

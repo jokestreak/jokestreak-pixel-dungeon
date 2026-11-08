@@ -154,8 +154,8 @@ public abstract class Plant implements Bundlable {
 		protected void onThrow( int cell ) {
 			if (Dungeon.level.map[cell] == Terrain.ALCHEMY
 					|| Dungeon.level.pit[cell]
-					|| Dungeon.level.traps.get(cell) != null
-					|| Dungeon.isChallenged(Challenges.NO_HERBALISM)) {
+					|| Dungeon.level.traps.get(cell) != null/*
+					|| Dungeon.isChallenged(Challenges.NO_HERBALISM)*/) {
 				super.onThrow( cell );
 			} else {
 				Catalog.countUse(getClass());

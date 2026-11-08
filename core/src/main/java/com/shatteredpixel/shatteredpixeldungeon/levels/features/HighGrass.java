@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.features;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
@@ -136,6 +137,10 @@ public class HighGrass {
 					lootChance /= 3;
 				}
 
+				if (Dungeon.isChallenged(Challenges.NO_HERBALISM)){
+					lootChance = 0f;
+				}
+
 				if (Random.Float() < lootChance) {
 					if (Random.Float() < PetrifiedSeed.stoneInsteadOfSeedChance()) {
 						level.drop(Generator.randomUsingDefaults(Generator.Category.STONE), pos).sprite.drop();
@@ -150,6 +155,10 @@ public class HighGrass {
 				//grassy levels spawn half as much dew
 				if (Dungeon.level != null && Dungeon.level.feeling == Level.Feeling.GRASS){
 					lootChance /= 2;
+				}
+
+				if (Dungeon.isChallenged(Challenges.NO_HERBALISM)){
+					lootChance = 0f;
 				}
 
 				if (Random.Float() < lootChance) {

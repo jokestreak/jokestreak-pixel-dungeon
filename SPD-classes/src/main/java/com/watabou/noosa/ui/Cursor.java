@@ -86,7 +86,7 @@ public class Cursor {
 		scaledImg.drawPixmap(cursorImg, 0, 0, cursorImg.getWidth(), cursorImg.getHeight(), 0, 0, scaledWidth, scaledHeight);
 
 		currentCursor = Gdx.graphics.newCursor(scaledImg, 0, 0);
-		Gdx.graphics.setCursor(currentCursor);
+		//Gdx.graphics.setCursor(currentCursor);
 		scaledImg.dispose();
 		cursorImg.dispose();
 

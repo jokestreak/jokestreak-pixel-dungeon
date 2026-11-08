@@ -60,6 +60,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlam
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfPurity;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfSnapFreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -114,7 +115,7 @@ public enum HeroClass {
 		Waterskin waterskin = new Waterskin();
 		waterskin.collect();
 
-		new ScrollOfIdentify().identify();
+		new ScrollOfIdentify().identify().collect();
 
 		switch (this) {
 			case WARRIOR:
@@ -183,8 +184,8 @@ public enum HeroClass {
 			Catalog.setSeen(BrokenSeal.class); //as it's not added to the inventory
 		}
 
-		new PotionOfHealing().identify();
-		new ScrollOfRage().identify();
+		new PotionOfHealing().identify().collect();
+		new ScrollOfRage().identify().collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -197,8 +198,8 @@ public enum HeroClass {
 
 		Dungeon.quickslot.setSlot(0, staff);
 
-		new ScrollOfUpgrade().identify();
-		new PotionOfLiquidFlame().identify();
+		new ScrollOfUpgrade().identify().collect();
+		new PotionOfLiquidFlame().identify().collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -214,8 +215,8 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(0, cloak);
 		Dungeon.quickslot.setSlot(1, knives);
 
-		new ScrollOfMagicMapping().identify();
-		new PotionOfInvisibility().identify();
+		new ScrollOfMagicMapping().identify().collect();
+		new PotionOfInvisibility().identify().collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -226,8 +227,8 @@ public enum HeroClass {
 
 		Dungeon.quickslot.setSlot(0, bow);
 
-		new PotionOfMindVision().identify();
-		new ScrollOfLullaby().identify();
+		new PotionOfMindVision().identify().collect();
+		new ScrollOfLullaby().identify().collect();
 	}
 
 	private static void initDuelist( Hero hero ) {
@@ -241,8 +242,8 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(0, hero.belongings.weapon);
 		Dungeon.quickslot.setSlot(1, spikes);
 
-		new PotionOfStrength().identify();
-		new ScrollOfMirrorImage().identify();
+		new PotionOfSnapFreeze().identify().collect();
+		new ScrollOfMirrorImage().identify().collect();
 	}
 
 	private static void initCleric( Hero hero ) {
@@ -256,8 +257,8 @@ public enum HeroClass {
 
 		Dungeon.quickslot.setSlot(0, tome);
 
-		new PotionOfPurity().identify();
-		new ScrollOfRemoveCurse().identify();
+		new PotionOfPurity().identify().collect();
+		new ScrollOfRemoveCurse().identify().collect();
 	}
 
 	public String title() {

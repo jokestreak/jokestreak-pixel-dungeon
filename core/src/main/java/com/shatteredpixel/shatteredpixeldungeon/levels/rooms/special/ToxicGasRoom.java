@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfPurity;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfStormClouds;
 import com.shatteredpixel.shatteredpixeldungeon.items.trinkets.TrinketCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -36,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.utils.Point;
+import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
@@ -104,7 +106,14 @@ public class ToxicGasRoom extends SpecialRoom {
 			level.drop(item, goldPositions.remove(0)).type = Heap.Type.CHEST;
 		}
 
-		level.addItemToSpawn(new PotionOfPurity());
+		switch (Random.Int(2)) {
+			case 0:
+				level.addItemToSpawn(new PotionOfPurity());
+				break;
+			case 1:
+				level.addItemToSpawn(new PotionOfStormClouds());
+				break;
+		}
 
 		entrance().set( Door.Type.REGULAR );
 

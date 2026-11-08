@@ -28,6 +28,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfDread;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -87,8 +90,21 @@ public class PoolRoom extends SpecialRoom {
 		int pos = x + y * level.width();
 		level.drop( prize( level ), pos ).type = Heap.Type.CHEST;
 		Painter.set( level, pos, Terrain.PEDESTAL );
-		
-		level.addItemToSpawn( new PotionOfInvisibility() );
+
+		switch(Random.Int(4)) {
+			case 0:
+				level.addItemToSpawn(new PotionOfInvisibility());
+				break;
+			case 1:
+				level.addItemToSpawn(new ScrollOfTerror());
+				break;
+			case 2:
+				level.addItemToSpawn(new ScrollOfDread());
+				break;
+			case 3:
+				level.addItemToSpawn(new ScrollOfLullaby());
+				break;
+		}
 		
 		for (int i=0; i < NPIRANHAS; i++) {
 			Piranha piranha = Piranha.random();

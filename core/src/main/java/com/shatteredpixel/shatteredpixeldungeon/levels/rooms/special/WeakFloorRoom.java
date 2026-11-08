@@ -24,11 +24,17 @@ package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfFeatherFall;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfHoneyedHealing;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfCleansing;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfShielding;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Mageroyal;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Tilemap;
 import com.watabou.utils.Point;
@@ -74,6 +80,27 @@ public class WeakFloorRoom extends SpecialRoom {
 		level.customTiles.add(vis);
 
 		Blob.seed( well.x + level.width() * well.y, 1, WellID.class, level );
+
+		switch (Random.Int(6)) {
+			case 0:
+				level.addItemToSpawn(new ElixirOfFeatherFall());
+				break;
+			case 1:
+				level.addItemToSpawn(new PotionOfHealing());
+				break;
+			case 2:
+				level.addItemToSpawn(new PotionOfShielding());
+				break;
+			case 3:
+				level.addItemToSpawn(new PotionOfCleansing());
+				break;
+			case 4:
+				level.addItemToSpawn(new Mageroyal.Seed());
+				break;
+			case 5:
+				level.addItemToSpawn(new ElixirOfHoneyedHealing());
+				break;
+		}
 	}
 
 	public static class HiddenWell extends CustomTilemap {

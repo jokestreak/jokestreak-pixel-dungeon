@@ -24,7 +24,10 @@ package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfDragonsBreath;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfBlast;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -54,7 +57,21 @@ public class StorageRoom extends SpecialRoom {
 		}
 		
 		entrance().set( Door.Type.BARRICADE );
-		level.addItemToSpawn( new PotionOfLiquidFlame() );
+
+		switch (Random.Int(4)) {
+			case 0:
+				level.addItemToSpawn(new PotionOfLiquidFlame());
+				break;
+			case 1:
+				level.addItemToSpawn(new PotionOfDragonsBreath());
+				break;
+			case 2:
+				level.addItemToSpawn(new StoneOfBlast());
+				break;
+			case 3:
+				level.addItemToSpawn(new Bomb());
+				break;
+		}
 	}
 	
 	private static Item prize( Level level ) {

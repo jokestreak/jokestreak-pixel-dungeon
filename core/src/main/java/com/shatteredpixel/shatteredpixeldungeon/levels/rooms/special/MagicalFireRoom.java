@@ -35,7 +35,13 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfFrost;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.brews.AquaBrew;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.brews.BlizzardBrew;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfSnapFreeze;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfStormClouds;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -109,7 +115,27 @@ public class MagicalFireRoom extends SpecialRoom {
 				level.drop( prize( level ), pos );
 		}
 
-		level.addItemToSpawn(new PotionOfFrost());
+		switch (Random.Int(6)) {
+			case 0:
+				level.addItemToSpawn(new PotionOfFrost());
+				break;
+			case 1:
+				level.addItemToSpawn(new PotionOfSnapFreeze());
+				break;
+			case 2:
+				level.addItemToSpawn(new AquaBrew());
+				break;
+			case 3:
+				level.addItemToSpawn(new PotionOfStormClouds());
+				break;
+			case 4:
+				level.addItemToSpawn(new FrostBomb());
+				break;
+			case 5:
+				level.addItemToSpawn(new BlizzardBrew());
+				break;
+		}
+
 
 	}
 

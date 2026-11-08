@@ -20,113 +20,80 @@ add setting to switch between shattered cursor, legacy cursor, system cursor
 
 # 0.0.1
 
-mobs display HP/HT when examined
+- mobs display HP/HT when examined
 
-dungeon generates 10 scrolls of upgrade (5 with forbidden runes)
+- dungeon generates 10 scrolls of upgrade (5 with forbidden runes)
 
-disabled custom cursor
+- disabled custom cursor
 
 puzzle rooms generate with a variety of solution items:
 
 magicalfireroom:
-
-potionoffrost
-
-potionofsnapfreeze
-
-aquabrew
-
-potionofstormclouds
-
-frostbomb
-
-blizzardbrew
+- potionoffrost
+- potionofsnapfreeze
+- aquabrew
+- potionofstormclouds
+- frostbomb
+- blizzardbrew
 
 poolroom:
-
-potionofinvisibility
-
-scrollofterror
-
-scrollofdread
-
-scrolloflullaby
+- potionofinvisibility
+- scrollofterror
+- scrollofdread
+- scrolloflullaby
 
 storageroom:
-
-potionofliquidflame
-
-potionofdragonsbreath
-
-stoneofblast
-
-bomb
+- potionofliquidflame
+- potionofdragonsbreath
+- stoneofblast
+- bomb
 
 toxicgasroom:
-
-potionofpurity
-
-potionofstormclouds
+- potionofpurity
+- potionofstormclouds
 
 trapsroom:
-
-potionoflevitation
-
-potionofstormclouds
+- potionoflevitation
+- potionofstormclouds
 
 
 weakfloorroom generates with one of:
-
-potionofhealing
-
-potionofshielding
-
-potionofcleansing
-
-mageroyal.seed
-
-elixirofhoneyedhealing
+- potionofhealing
+- potionofshielding
+- potionofcleansing
+- mageroyal.seed
+- elixirofhoneyedhealing
 
 
-on diet renamed to famine and reworked: guaranteed ration/pasty each floor replaced with small ration
+- on diet renamed to famine and reworked: guaranteed ration/pasty each floor replaced with small ration
 
-barren land reworked: seeds and dew don't drop from highgrass
+- barren land reworked: seeds and dew don't drop from highgrass
 
-potion of shielding and elixir of aquatic rejuvenation work normally with pharmacophobia
+- potion of shielding and elixir of aquatic rejuvenation work normally with pharmacophobia
 
+heroes start with the consumables they identify, and some changes:
+- warrior starts with potion of shielding instead of healing
+- mage starts with scroll of recharging instead of upgrade
+- duelist starts with potion of snap freeze instead of strength
+- cloak of shadows and holy tome can be transmuted
 
-heroes starts with the scrolls and potion they identify
-
-warrior starts with potion of shielding instead of healing
-
-mage starts with scroll of recharging instead of upgrade
-
-duelist starts with potion of snap freeze instead of strength
-
-cloak of shadows and holy tome can be transmuted
-
-
-shops sell one small ration and one ration instead of two small rations
-
+- shops sell one small ration and one ration instead of two small rations
 
 better item descriptions:
+- potion of haste
+- potion of mind vision
+- potion of levitation
+- potion of purity
+- potion of invisibility
 
-potion of haste
+- disabled worn key popup
 
-potion of mind vision
+- disabled support and news buttons on main menu
 
-potion of levitation
+- disabled language support
 
-potion of purity
+- brightness setting renamed to fogofwar
 
-potion of invisibility
+- menu button unshattered
 
-
-disabled worn key popup
-
-disabled support and news buttons on main menu
-
-disabled language support
-
-brightness setting renamed to fogofwar
-
+- some other things i forgot about, probably

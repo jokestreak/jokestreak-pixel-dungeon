@@ -64,6 +64,21 @@ public class AboutScene extends PixelScene {
 		Component content = list.content();
 		content.clear();
 
+		//*** JOKESTREAK ***
+
+		CreditsBlock jokestreak = new CreditsBlock(true, 0xFF00FF,
+				"JOKESTREAK PIXEL DUNGEON",
+				Icons.INFO.get(),
+				"jokestreak",
+				null,
+				null);
+		if (landscape()){
+			jokestreak.setRect((w - fullWidth)/2f - 6, insets.top + 26, 120, 0);
+		} else {
+			jokestreak.setRect((w - fullWidth)/2f, insets.top + 6, 120, 0);
+		}
+		content.add(jokestreak);
+
 		//*** Shattered Pixel Dungeon Credits ***
 
 		CreditsBlock shpx = new CreditsBlock(true, Window.SHPX_COLOR,
@@ -73,9 +88,9 @@ public class AboutScene extends PixelScene {
 				"ShatteredPixel.com",
 				"https://ShatteredPixel.com");
 		if (landscape()){
-			shpx.setRect((w - fullWidth)/2f - 6, insets.top + 26, 120, 0);
+			shpx.setRect(shpx.left(), jokestreak.bottom() + 8, colWidth, 0);
 		} else {
-			shpx.setRect((w - fullWidth)/2f, insets.top + 6, 120, 0);
+			shpx.setRect(shpx.left(), jokestreak.bottom() + 8, colWidth, 0);
 		}
 		content.add(shpx);
 

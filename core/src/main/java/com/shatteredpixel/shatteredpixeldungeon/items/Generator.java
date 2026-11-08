@@ -360,7 +360,7 @@ public class Generator {
 			SEED.probs = SEED.defaultProbs.clone();
 			
 			SCROLL.classes = new Class<?>[]{
-					ScrollOfUpgrade.class, //3 drop every chapter, see Dungeon.souNeeded()
+					ScrollOfUpgrade.class, //2 drop every chapter, see Dungeon.souNeeded()
 					ScrollOfIdentify.class,
 					ScrollOfRemoveCurse.class,
 					ScrollOfMirrorImage.class,

@@ -15,8 +15,8 @@ allprojects {
         appPackageName = 'com.jokestreak.jokestreakpixeldungeon'
 
         //Full releases gets +2 on version code, needed for an F-Droid quirk
-        appVersionCode = 924
-        appVersionName = '0.0.1'
+        appVersionCode = 926
+        appVersionName = '0.0.2'
 
         appJavaCompatibility = JavaVersion.VERSION_11
 

@@ -4,19 +4,24 @@ Jokestreak Pixel Dungeon is a fork of [Shattered Pixel Dungeon](https://shattere
 
 # TODO
 
-test special room solving items
+- remove talents
+- replace duelist and cleric
+- gas QoL
+- merge enchants and curses
+- add setting to switch between shattered cursor, legacy cursor, system cursor
+- test special room solving items
+- give necroskeles better visuals
+- fix "go here" and "interact" right-click options
 
-give necroskeles better visuals
+# 0.0.2
 
-improve gas visuals
-
-show gas volume when examined
-
-fix "go here" and "interact" right-click options
-
-merge enchants and curses
-
-add setting to switch between shattered cursor, legacy cursor, system cursor
+- ROGUE STARTS WITH POTION OF SHROUDING FOG INSTEAD OF POTION OF INVISIBILITY
+- MAGE ACTUALLY STARTS WITH SCROLL OF RECHARGING INSTEAD OF SCROLL OF UPGRADE, AS WAS INTENDED FOR 0.0.1
+- - HEROES START WITH BOMBS:
+- - WARRIOR FROSTBOMB
+- - MAGE FIREBOMB
+- - ROGUE SMOKEBOMB
+- - HUNTRESS REGROWTHBOMB
 
 # 0.0.1
 
@@ -56,14 +61,12 @@ trapsroom:
 - potionoflevitation
 - potionofstormclouds
 
-
 weakfloorroom generates with one of:
 - potionofhealing
 - potionofshielding
 - potionofcleansing
 - mageroyal.seed
 - elixirofhoneyedhealing
-
 
 - on diet renamed to famine and reworked: guaranteed ration/pasty each floor replaced with small ration
 
